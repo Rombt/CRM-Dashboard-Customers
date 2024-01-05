@@ -4,3 +4,83 @@
 
 @import "variables.less";
 @import "mixins.less";
+
+
+
+
+.conteiner {
+   .wrapper();
+   display: flex;
+   flex-direction: column;
+
+   height: 100vh;
+
+   border: 1px solid #0515fd;
+
+}
+
+.wrap {
+   .row-flex();
+   height: 100%;
+}
+
+
+header {
+
+   height: 158px;
+   width: 100%;
+
+   border: 1px solid rgb(225, 250, 6);
+}
+
+aside {
+
+   .col();
+   .size(3);
+
+
+   border: 2px solid rgb(250, 5, 17);
+
+
+}
+
+main {
+   .col();
+   .size(9);
+
+
+   height: 100%;
+
+
+
+
+   border: 2px solid rgb(128, 156, 247);
+}
+
+
+
+footer {
+
+   height: 258px;
+   width: 100%;
+
+
+
+   border: 5px solid rgb(9, 238, 219);
+}
+
+
+
+
+
+
+
+
+
+
+.debug-grid {
+   .debug(#b2bdfa1a, 1px rgba(6, 235, 197, 0.5) solid);
+
+   pointer-events: none;
+   z-index: 100;
+}
