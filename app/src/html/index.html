@@ -88,138 +88,134 @@
                 </nav>
             </aside>
             <main>
-                <table>
-                    <caption>
-                        <div class="caption-wrap">
-                            <div class="title">
-                                <h2>All Customers</h2>
-                                <p>Active Members</p>
-                            </div>
-                            <search role="search" class="search">
-                                <div class="search__icon-wrap">
-                                    <svg class="search__icon">
-                                        <use xlink: href="assets/img/icons/sprite.svg#search"></use>
-                                    </svg>
-                                </div>
-                                <form method="get" action="/search">
-                                    <input type="search" name="search-text" placeholder="Search" />
-                                </form>
-                            </search>
+                <section class="maim-table">
+                    <div class="caption-table">
+                        <div class="title">
+                            <h2>All Customers</h2>
+                            <p>Active Members</p>
                         </div>
-                    </caption>
-                    <thead>
-                        <tr>
-                            <th>Customer Name</th>
-                            <th>Company</th>
-                            <th>Phone Number</th>
-                            <th>Email</th>
-                            <th>Country</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Jane Cooper</td>
-                            <td>Microsoft</td>
-                            <td>(225) 555-0118</td>
-                            <td>jane@microsoft.com</td>
-                            <td>United States</td>
-                            <td>
-                                <div class="status active">active</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Floyd Miles</td>
-                            <td>Yahoo</td>
-                            <td>(205) 555-0100</td>
-                            <td>floyd@yahoo.com</td>
-                            <td>Kiribati</td>
-                            <td>
-                                <div class="status inactive">inactive</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Ronald Richards</td>
-                            <td>Adobe</td>
-                            <td>(302) 555-0107</td>
-                            <td>ronald@adobe.com</td>
-                            <td>Israel</td>
-                            <td>
-                                <div class="status inactive">inactive</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Marvin McKinney</td>
-                            <td>Tesla</td>
-                            <td>(252) 555-0126</td>
-                            <td>marvin@tesla.com</td>
-                            <td>Iran</td>
-                            <td>
-                                <div class="status active">active</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Jerome Bell</td>
-                            <td>Google</td>
-                            <td>(629) 555-0129</td>
-                            <td>jerome@google.com</td>
-                            <td>Réunion</td>
-                            <td>
-                                <div class="status active">active</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Kathryn Murphy</td>
-                            <td>Microsoft</td>
-                            <td>(406) 555-0120</td>
-                            <td>kathryn@microsoft.com</td>
-                            <td>Curaçao</td>
-                            <td>
-                                <div class="status active">active</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Jacob Jones</td>
-                            <td>Yahoo</td>
-                            <td>(208) 555-0112</td>
-                            <td>jacob@yahoo.com</td>
-                            <td>Brazil</td>
-                            <td>
-                                <div class="status active">active</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Kristin Watson</td>
-                            <td>Facebook</td>
-                            <td>(704) 555-0127</td>
-                            <td>kristin@facebook.com</td>
-                            <td>Åland Islands</td>
-                            <td>
-                                <div class="status inactive">inactive</div>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="3">
-                                Showing data 1 to 8 of 256K entries
-                            </td>
-                            <td colspan="3">
-                                <nav class="pagination">
-                                    <div class="pagination__button pagination-left">
-                                        < </div>
-                                            <div class="pagination__button pagination-number">1</div>
-                                            <div class="pagination__button pagination-number">2</div>
-                                            <div class="pagination__button pagination-number">3</div>
-                                            <div class="pagination__button pagination-number">4</div>
-                                            <div class="pagination__button pagination__dots">...</div>
-                                            <div class="pagination__button pagination-number">40</div>
-                                            <div class="pagination__button pagination-right"> > </div>
-                                </nav>
-                            </td>
-                        </tr>
-                    </tfoot>
-                </table>
+                        <search role="search" class="search">
+                            <div class="search__icon-wrap">
+                                <svg class="search__icon">
+                                    <use xlink: href="assets/img/icons/sprite.svg#search"></use>
+                                </svg>
+                            </div>
+                            <form method="get" action="/search">
+                                <input type="search" name="search-text" placeholder="Search" />
+                            </form>
+                        </search>
+                    </div>
+
+                    <div class="table">
+                        <div class="table__head">
+                            <div class="th-cell">Customer Name</div>
+                            <div class="th-cell">Company</div>
+                            <div class="th-cell">Phone Number</div>
+                            <div class="th-cell">Email</div>
+                            <div class="th-cell">Country</div>
+                            <div class="th-cell">Status</div>
+                        </div>
+                        <div class="table__body">
+                            <div class="table__row">
+                                <div class="table__cell">Jane Cooper</div>
+                                <div class="table__cell">Microsoft</div>
+                                <div class="table__cell">(225) 555-0118</div>
+                                <div class="table__cell">jane@microsoft.com</div>
+                                <div class="table__cell">United States</div>
+                                <div class="table__cell">
+                                    <div class="status active">active</div>
+                                </div>
+                            </div>
+                            <div class="table__row">
+                                <div class="table__cell">Floyd Miles</div>
+                                <div class="table__cell">Yahoo</div>
+                                <div class="table__cell">(205) 555-0100</div>
+                                <div class="table__cell">floyd@yahoo.com</div>
+                                <div class="table__cell">Kiribati</div>
+                                <div class="table__cell">
+                                    <div class="status inactive">inactive</div>
+                                </div>
+                            </div>
+                            <div class="table__row">
+                                <div class="table__cell">Ronald Richards</div>
+                                <div class="table__cell">Adobe</div>
+                                <div class="table__cell">(302) 555-0107</div>
+                                <div class="table__cell">ronald@adobe.com</div>
+                                <div class="table__cell">Israel</div>
+                                <div class="table__cell">
+                                    <div class="status inactive">inactive</div>
+                                </div>
+                            </div>
+                            <div class="table__row">
+                                <div class="table__cell">Marvin McKinney</div>
+                                <div class="table__cell">Tesla</div>
+                                <div class="table__cell">(252) 555-0126</div>
+                                <div class="table__cell">marvin@tesla.com</div>
+                                <div class="table__cell">Iran</div>
+                                <div class="table__cell">
+                                    <div class="status active">active</div>
+                                </div>
+                            </div>
+                            <div class="table__row">
+                                <div class="table__cell">Jerome Bell</div>
+                                <div class="table__cell">Google</div>
+                                <div class="table__cell">(629) 555-0129</div>
+                                <div class="table__cell">jerome@google.com</div>
+                                <div class="table__cell">Réunion</div>
+                                <div class="table__cell">
+                                    <div class="status active">active</div>
+                                </div>
+                            </div>
+                            <div class="table__row">
+                                <div class="table__cell">Kathryn Murphy</div>
+                                <div class="table__cell">Microsoft</div>
+                                <div class="table__cell">(406) 555-0120</div>
+                                <div class="table__cell">kathryn@microsoft.com</div>
+                                <div class="table__cell">Curaçao</div>
+                                <div class="table__cell">
+                                    <div class="status active">active</div>
+                                </div>
+                            </div>
+                            <div class="table__row">
+                                <div class="table__cell">Jacob Jones</div>
+                                <div class="table__cell">Yahoo</div>
+                                <div class="table__cell">(208) 555-0112</div>
+                                <div class="table__cell">jacob@yahoo.com</div>
+                                <div class="table__cell">Brazil</div>
+                                <div class="table__cell">
+                                    <div class="status active">active</div>
+                                </div>
+                            </div>
+                            <div class="table__row">
+                                <div class="table__cell">Kristin Watson</div>
+                                <div class="table__cell">Facebook</div>
+                                <div class="table__cell">(704) 555-0127</div>
+                                <div class="table__cell">kristin@facebook.com</div>
+                                <div class="table__cell">Åland Islands</div>
+                                <div class="table__cell">
+                                    <div class="status inactive">inactive</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-footer">
+                        <div class="table-footer__left-block">Showing data 1 to 8 of 256K entries</div>
+                        <div class="table-footer__right-block">
+                            <nav class="pagination">
+                                <div class="pagination__button pagination-left">
+                                    < </div>
+                                        <div class="pagination__button pagination-number">1</div>
+                                        <div class="pagination__button pagination-number">2</div>
+                                        <div class="pagination__button pagination-number">3</div>
+                                        <div class="pagination__button pagination-number">4</div>
+                                        <div class="pagination__button pagination__dots">...</div>
+                                        <div class="pagination__button pagination-number">40</div>
+                                        <div class="pagination__button pagination-right"> > </div>
+                            </nav>
+                        </div>
+                    </div>
+                </section>
             </main>
         </div>
         <footer>
