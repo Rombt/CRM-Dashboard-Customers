@@ -785,6 +785,50 @@ main {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 850px) {
+  .main-table-mobail {
+    display: none;
+  }
+}
+@media screen and (max-width: 850px) {
+  .main-table-mobail {
+    display: block;
+  }
+}
+.main-table-mobail .table-cell-mobail {
+  display: flex;
+  margin-left: 30px;
+  border-bottom: 1px solid #eeeeee;
+}
+.main-table-mobail .table-cell-mobail details > summary {
+  color: #292D32;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.14px;
+}
+.main-table-mobail .table-cell-mobail p:first-child {
+  color: #B5B7C0;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.14px;
+  width: 150px;
+}
+.main-table-mobail .table-cell-mobail p:last-child {
+  color: #292D32;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.14px;
+  margin-left: 50px;
+}
 footer {
   min-height: 258px;
   width: 100%;
