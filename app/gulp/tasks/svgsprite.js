@@ -14,7 +14,6 @@ import svgSprite from "gulp-svg-sprite";
 
 export const createSvgSprite = (done) => {
 
-
     if (app.plugins.fs.existsSync(`${app.path.svg.dest}/sprite.svg`)
     ) {
         console.log("sprite.svg has already existing, for re-creation you must delete it.");
@@ -26,8 +25,10 @@ export const createSvgSprite = (done) => {
         .pipe(svgSprite({
             mode: {
                 stack: {
-                    sprite: '../sprite.svg',
                     example: true, // creates html page with examples icons
+                },
+                symbol: {    // Create a «symbol» sprite
+                    sprite: '../sprite.svg',
                 }
             },
         }))

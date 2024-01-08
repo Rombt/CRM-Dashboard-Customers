@@ -27,7 +27,7 @@ export const path = {
    srcPluginName: 'core-plugin',    // set name your plugin for development version 
    RootPath: ROOT_PATH,
    proxy: [
-      `http://ms/`,
+      `http://rombt/CRM-Dashboard-Customers/docs/`,
       `http://web/rombt/CRM-Dashboard-Customers/docs/`,
    ],
 
