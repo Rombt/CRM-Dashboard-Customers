@@ -551,8 +551,15 @@ main {
     margin: 0 auto;
   }
 }
-.main-table {
-  display: table;
+@media screen and (max-width: 970px) {
+  main {
+    margin: 0 20px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .main-table {
+    display: none;
+  }
 }
 .caption-table {
   display: flex;
