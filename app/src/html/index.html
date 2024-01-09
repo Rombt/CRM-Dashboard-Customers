@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 @@include('template-parts/parts/head.html',{
-"title":"My site title"
+"title":"CRM-Dashboard-Customers"
 })
 
 <body>
 
-    <!-- @@include('template-parts/debug-grid.html',{}) -->
 
     <div class="conteiner">
         <header class="header">
@@ -28,8 +27,8 @@
         </header>
         <div class="wrap">
             <aside>
-                <nav>
-                    <ul>
+                <nav id="js-nav" class="nav">
+                    <ul class="list">
                         <li>
                             <svg class="icon">
                                 <use xlink:href="assets/img/icons/sprite.svg#dashboard"></use>
@@ -86,6 +85,13 @@
                         </li>
                     </ul>
                 </nav>
+                <!-- Hamburger Button -->
+                <button id="js-hamburger" class="hamburger" type="button">
+                    <span id="js-top-line" class="top-line"></span>
+                    <span id="js-center-line" class="center-line"></span>
+                    <span id="js-bottom-line" class="bottom-line"></span>
+                </button>
+                </header>
             </aside>
             <main>
                 <section class="main-table">
@@ -122,7 +128,7 @@
                                 <div class="table__cell">jane@microsoft.com</div>
                                 <div class="table__cell">United States</div>
                                 <div class="table__cell">
-                                    <div class="status active">active</div>
+                                    <div class="status status-active">active</div>
                                 </div>
                             </div>
                             <div class="table__row">
@@ -132,7 +138,7 @@
                                 <div class="table__cell">floyd@yahoo.com</div>
                                 <div class="table__cell">Kiribati</div>
                                 <div class="table__cell">
-                                    <div class="status inactive">inactive</div>
+                                    <div class="status status-inactive">inactive</div>
                                 </div>
                             </div>
                             <div class="table__row">
@@ -142,7 +148,7 @@
                                 <div class="table__cell">ronald@adobe.com</div>
                                 <div class="table__cell">Israel</div>
                                 <div class="table__cell">
-                                    <div class="status inactive">inactive</div>
+                                    <div class="status status-inactive">inactive</div>
                                 </div>
                             </div>
                             <div class="table__row">
@@ -152,7 +158,7 @@
                                 <div class="table__cell">marvin@tesla.com</div>
                                 <div class="table__cell">Iran</div>
                                 <div class="table__cell">
-                                    <div class="status active">active</div>
+                                    <div class="status status-active">active</div>
                                 </div>
                             </div>
                             <div class="table__row">
@@ -162,7 +168,7 @@
                                 <div class="table__cell">jerome@google.com</div>
                                 <div class="table__cell">Réunion</div>
                                 <div class="table__cell">
-                                    <div class="status active">active</div>
+                                    <div class="status status-active">active</div>
                                 </div>
                             </div>
                             <div class="table__row">
@@ -172,7 +178,7 @@
                                 <div class="table__cell">kathryn@microsoft.com</div>
                                 <div class="table__cell">Curaçao</div>
                                 <div class="table__cell">
-                                    <div class="status active">active</div>
+                                    <div class="status status-active">active</div>
                                 </div>
                             </div>
                             <div class="table__row">
@@ -182,7 +188,7 @@
                                 <div class="table__cell">jacob@yahoo.com</div>
                                 <div class="table__cell">Brazil</div>
                                 <div class="table__cell">
-                                    <div class="status active">active</div>
+                                    <div class="status status-active">active</div>
                                 </div>
                             </div>
                             <div class="table__row">
@@ -192,7 +198,7 @@
                                 <div class="table__cell">kristin@facebook.com</div>
                                 <div class="table__cell">Åland Islands</div>
                                 <div class="table__cell">
-                                    <div class="status inactive">inactive</div>
+                                    <div class="status status-inactive">inactive</div>
                                 </div>
                             </div>
                         </div>
@@ -241,7 +247,7 @@
                         </div>
                         <div class="table-cell-mobail">
                             <p>Phone Number</p>
-                            <p> (225) 555-0118</p>
+                            <p>(225) 555-0118</p>
                         </div>
                         <div class="table-cell-mobail">
                             <p>Email</p>
@@ -253,9 +259,8 @@
                         </div>
                         <div class="table-cell-mobail">
                             <p>Status</p>
-                            <p class="status active">Active</p>
+                            <p class="status status-active">Active</p>
                         </div>
-
                     </details>
 
                     <details>
@@ -266,7 +271,7 @@
                         </div>
                         <div class="table-cell-mobail">
                             <p>Phone Number</p>
-                            <p> (225) 555-0118</p>
+                            <p>(225) 555-0118</p>
                         </div>
                         <div class="table-cell-mobail">
                             <p>Email</p>
@@ -278,9 +283,176 @@
                         </div>
                         <div class="table-cell-mobail">
                             <p>Status</p>
-                            <p class="status active">Active</p>
+                            <p class="status status-active">active</p>
                         </div>
+                    </details>
 
+                    <details>
+                        <summary>Floyd Miles</summary>
+                        <div class="table-cell-mobail">
+                            <p>Company</p>
+                            <p>Yahoo</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Phone Number</p>
+                            <p>(205) 555-0100</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Email</p>
+                            <p>floyd@yahoo.com</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Country</p>
+                            <p>Kiribati</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Status</p>
+                            <p class="status status-inactive">inactive</p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>Ronald Richards</summary>
+                        <div class="table-cell-mobail">
+                            <p>Company</p>
+                            <p>Adobe</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Phone Number</p>
+                            <p>(302) 555-0107</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Email</p>
+                            <p>ronald@adobe.com</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Country</p>
+                            <p>Israel</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Status</p>
+                            <p class="status status-inactive">inactive</p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>Marvin McKinney</summary>
+                        <div class="table-cell-mobail">
+                            <p>Company</p>
+                            <p>Tesla</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Phone Number</p>
+                            <p>(252) 555-0126</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Email</p>
+                            <p>marvin@tesla.com</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Country</p>
+                            <p>Iran</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Status</p>
+                            <p class="status status-active">active</p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>Jerome Bell</summary>
+                        <div class="table-cell-mobail">
+                            <p>Company</p>
+                            <p>Google</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Phone Number</p>
+                            <p>(629) 555-0129</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Email</p>
+                            <p>jerome@google.com</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Country</p>
+                            <p>Réunion</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Status</p>
+                            <p class="status status-active">active</p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>Kathryn Murphy</summary>
+                        <div class="table-cell-mobail">
+                            <p>Company</p>
+                            <p>Microsoft</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Phone Number</p>
+                            <p>(406) 555-0120</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Email</p>
+                            <p>kathryn@microsoft.com</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Country</p>
+                            <p>Curaçao</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Status</p>
+                            <p class="status status-active">active</p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>Jacob Jones</summary>
+                        <div class="table-cell-mobail">
+                            <p>Company</p>
+                            <p>Yahoo</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Phone Number</p>
+                            <p>(208) 555-0112</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Email</p>
+                            <p>jacob@yahoo.com</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Country</p>
+                            <p>Brazil</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Status</p>
+                            <p class="status status-active">active</p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>Kristin Watson</summary>
+                        <div class="table-cell-mobail">
+                            <p>Company</p>
+                            <p>Facebook</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Phone Number</p>
+                            <p>(704) 555-0127</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Email</p>
+                            <p>kristin@facebook.com</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Country</p>
+                            <p>Åland Islands</p>
+                        </div>
+                        <div class="table-cell-mobail">
+                            <p>Status</p>
+                            <p class="status status-inactive">inactive</p>
+                        </div>
                     </details>
 
 
@@ -304,7 +476,7 @@
 
 
 
-
+    <script src="assets/js/app.main.min.js"></script>
 
 </body>
 

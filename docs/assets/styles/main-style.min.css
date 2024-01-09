@@ -324,10 +324,8 @@ template {
   font-weight: 600;
   font-style: normal;
 }
-/* основной цвет шрифта */
-/* основной цвет фона */
 body {
-  background-color: #000;
+  background-color: #000000;
 }
 .conteiner {
   max-width: 1440px;
@@ -338,6 +336,7 @@ body {
   flex-direction: column;
   height: 1198px;
   background-color: #FAFBFF;
+  font-family: Poppins;
 }
 @media screen and (max-width: 920px) {
   .conteiner {
@@ -380,7 +379,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 @media screen and (max-width: 1300px) {
   .left-column {
@@ -392,12 +391,23 @@ body {
   width: 100%;
   display: flex;
 }
+@media screen and (max-width: 680px) {
+  .header {
+    padding: 0px 20px 0px 0px;
+  }
+}
 @media screen and (max-width: 570px) {
   .header {
     flex-direction: column;
     padding: 0px;
     align-items: center;
     margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .header__left-column {
+    padding-left: 90px;
+    flex-shrink: 1;
   }
 }
 .header__left-column .logo {
@@ -413,8 +423,7 @@ body {
   height: 39px;
   width: 150px;
   margin-left: 8px;
-  color: #000;
-  font-family: Poppins;
+  color: #000000;
   font-size: 26px;
   font-style: normal;
   font-weight: 600;
@@ -426,7 +435,6 @@ body {
   height: 15px;
   color: #838383;
   margin: 0px 0px -10px 4px;
-  font-family: Poppins;
   font-size: 10px;
   font-style: normal;
   font-weight: 500;
@@ -457,8 +465,7 @@ body {
   align-items: center;
 }
 .header__centr-column .hello h2 {
-  color: #000;
-  font-family: Poppins;
+  color: #000000;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -479,6 +486,7 @@ body {
   margin-left: -17.5px;
   margin-right: -17.5px;
   height: 100%;
+  flex-wrap: nowrap;
 }
 @media screen and (max-width: 420px) {
   .wrap {
@@ -494,7 +502,7 @@ aside {
   width: 278px;
   margin-right: 0px;
   height: 100%;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 @media screen and (max-width: 420px) {
   aside {
@@ -509,20 +517,19 @@ aside nav .chevron-right {
   position: absolute;
   right: 8px;
 }
-aside nav ul {
+aside nav .list {
   list-style-type: none;
   display: flex;
   flex-direction: column;
   row-gap: 30px;
   align-items: flex-end;
 }
-aside nav li {
+aside nav .list li {
   color: #9197B3;
-  font-family: Poppins;
   font-size: 14px;
   font-style: normal;
-  font-weight: 500;
   line-height: normal;
+  font-weight: 500;
   letter-spacing: -0.14px;
   width: 250px;
   height: 46px;
@@ -530,28 +537,86 @@ aside nav li {
   position: relative;
   display: flex;
   align-items: center;
-  background-color: #fff;
+  background-color: #ffffff;
 }
-aside nav li:hover {
+aside nav .list li:hover {
   border-radius: 8px;
   background: #5932EA;
   color: #ffffff;
 }
-aside nav li:hover .icon,
-aside nav li:hover .chevron-right {
+aside nav .list li:hover .icon,
+aside nav .list li:hover .chevron-right {
   stroke: #ffffff;
   fill: #ffffff;
 }
+aside .hamburger {
+  opacity: 0;
+}
 @media screen and (max-width: 1300px) {
   aside {
-    display: none;
+    width: 0px;
+  }
+  aside .nav {
+    background: #ffffff;
+    position: fixed;
+    top: 128px;
+    left: 0;
+    width: 278px;
+    height: 1070px;
+    transition: transform 0.7s, opacity 1s;
+    transform: translateX(-100%);
+    opacity: 0;
+    z-index: 5;
+  }
+  aside .nav.show {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  aside .hamburger {
+    opacity: 1;
+    position: relative;
+    margin-left: auto;
+    width: 45px;
+    height: 35px;
+    z-index: 6;
+    top: -108px;
+    left: 20px;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+  aside .hamburger span {
+    position: absolute;
+    left: 0;
+    background: #292D32;
+    width: inherit;
+    height: 3px;
+    transition: transform 0.5s, opacity 0.5s;
+  }
+  aside .top-line {
+    top: 0px;
+  }
+  aside .center-line {
+    top: 15px;
+  }
+  aside .bottom-line {
+    bottom: 0px;
+  }
+  aside .top-line.active {
+    transform: translateY(15px) rotate(45deg);
+  }
+  aside .center-line.active {
+    opacity: 0;
+  }
+  aside .bottom-line.active {
+    transform: translateY(-15px) rotate(-45deg);
   }
 }
 main {
   width: 968px;
   margin-left: 71px;
   height: 100%;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 10px;
 }
 @media screen and (max-width: 1300px) {
@@ -564,7 +629,7 @@ main {
     margin: 0 20px;
   }
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 650px) {
   .main-table {
     display: none;
   }
@@ -592,8 +657,7 @@ main {
   align-items: flex-start;
 }
 .caption-table .title h2 {
-  color: #000;
-  font-family: Poppins;
+  color: #000000;
   font-size: 22px;
   font-style: normal;
   font-weight: 600;
@@ -603,7 +667,6 @@ main {
 }
 .caption-table .title p {
   color: #16C098;
-  font-family: Poppins;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -621,7 +684,7 @@ main {
   width: 216px;
   height: 38px;
   border-radius: 10px;
-  background: #F9FBFF;
+  background: #FAFBFF;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -645,7 +708,6 @@ main {
 }
 .caption-table .search form input {
   color: #B5B7C0;
-  font-family: Poppins;
   font-size: 15px;
   font-style: normal;
   font-weight: 300;
@@ -655,7 +717,7 @@ main {
   width: 172px;
   border: none;
   border-radius: 10px;
-  background: #F9FBFF;
+  background: #FAFBFF;
 }
 .caption-table .search form input:focus-visible {
   outline: none;
@@ -677,7 +739,6 @@ main {
 }
 .table__head .th-cell {
   color: #B5B7C0;
-  font-family: Poppins;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -688,6 +749,11 @@ main {
   vertical-align: middle;
   border-bottom: 1px solid #eeeeee;
 }
+@media screen and (max-width: 800px) {
+  .table__head .th-cell {
+    padding: 10px;
+  }
+}
 .table__head .th-cell:first-child {
   padding-left: 38px;
 }
@@ -696,7 +762,6 @@ main {
 }
 .table__cell {
   color: #292D32;
-  font-family: Poppins;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -730,7 +795,6 @@ main {
 }
 .table-footer {
   color: #B5B7C0;
-  font-family: Poppins;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -748,7 +812,6 @@ main {
   padding-right: 38px;
 }
 .status {
-  font-family: Poppins;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -763,12 +826,17 @@ main {
   align-items: center;
   justify-content: center;
 }
-.active {
+@media screen and (max-width: 800px) {
+  .status {
+    width: 50px;
+  }
+}
+.status-active {
   color: #008767;
   border: 1px solid #00B087;
   background: rgba(22, 192, 152, 0.38);
 }
-.inactive {
+.status-inactive {
   color: #DF0404;
   border: 1px solid #DF0404;
   background: #FFC5C5;
@@ -782,11 +850,10 @@ main {
   height: 25px;
   width: 25px;
   border-radius: 4px;
-  border: 1px solid #EEE;
+  border: 1px solid #eeeeee;
   background: #F5F5F5;
   color: #404B52;
   cursor: pointer;
-  font-family: Poppins;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -803,7 +870,6 @@ main {
 .pagination .pagination-left,
 .pagination .pagination-right {
   color: #404B52;
-  font-family: Poppins;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -816,13 +882,12 @@ main {
 .main-table-mobail {
   display: none;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 650px) {
   .main-table-mobail {
     display: block;
   }
   .main-table-mobail summary {
     color: #292D32;
-    font-family: Poppins;
     font-size: 25px;
     font-style: normal;
     font-weight: 500;
@@ -831,7 +896,6 @@ main {
   }
 }
 .main-table-mobail .table-cell-mobail {
-  font-family: Poppins;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -884,8 +948,7 @@ footer .footer-content__avatar .wrap-img {
   height: 42px;
 }
 footer .footer-content__text h5 {
-  color: #000;
-  font-family: Poppins;
+  color: #000000;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -895,71 +958,10 @@ footer .footer-content__text h5 {
 }
 footer .footer-content__text p {
   color: #757575;
-  font-family: Poppins;
   font-size: 12px;
   font-style: normal;
   font-weight: 200;
   line-height: normal;
   letter-spacing: 0.12px;
   margin: 0px 0px 0px 0px;
-}
-.debug-grid {
-  height: 100vh;
-  position: fixed;
-  width: 100%;
-  pointer-events: none;
-  z-index: 100;
-}
-.debug-grid > div {
-  height: inherit;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding-left: 0px;
-  padding-right: 0px;
-}
-@media screen and (max-width: 920px) {
-  .debug-grid > div {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-@media screen and (max-width: 420px) {
-  .debug-grid > div {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-}
-.debug-grid > div > div {
-  height: inherit;
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -17.5px;
-  margin-right: -17.5px;
-}
-@media screen and (max-width: 420px) {
-  .debug-grid > div > div {
-    margin-left: -5px;
-    margin-right: -5px;
-  }
-}
-.debug-grid > div > div > div {
-  box-sizing: border-box;
-  word-wrap: break-word;
-  margin-left: 17.5px;
-  margin-right: 17.5px;
-  width: calc(100% / 12 * 1 - 35px);
-  height: inherit;
-  outline: 1px rgba(6, 235, 197, 0.5) solid;
-  background: #b2bdfa1a;
-}
-@media screen and (max-width: 420px) {
-  .debug-grid > div > div > div {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-}
-@media screen and (max-width: 420px) {
-  .debug-grid > div > div > div {
-    width: calc(100% / 12 * 1 - 10px);
-  }
 }
