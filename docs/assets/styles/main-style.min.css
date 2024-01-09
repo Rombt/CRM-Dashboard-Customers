@@ -543,8 +543,66 @@ aside nav li:hover .chevron-right {
   fill: #ffffff;
 }
 @media screen and (max-width: 1300px) {
-  aside {
-    display: none;
+  aside .nav {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40%;
+    /* 100% = fullscreen */
+    height: 100%;
+    transition: transform 0.7s, opacity 1s;
+    transform: translateX(-100%);
+    opacity: 0;
+    z-index: 5;
+  }
+  aside .nav.show {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  aside .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+  }
+  aside .hamburger {
+    position: relative;
+    margin-left: auto;
+    width: 45px;
+    height: 35px;
+    z-index: 6;
+    top: -100px;
+    left: 20px;
+    border: none;
+    background-color: #fff;
+  }
+  aside .hamburger span {
+    position: absolute;
+    left: 0;
+    background: #000;
+    width: inherit;
+    height: 3px;
+    transition: transform 0.5s, opacity 0.5s;
+  }
+  aside .top-line {
+    top: 0px;
+  }
+  aside .center-line {
+    top: 15px;
+  }
+  aside .bottom-line {
+    bottom: 0px;
+  }
+  aside .top-line.active {
+    transform: translateY(15px) rotate(45deg);
+  }
+  aside .center-line.active {
+    opacity: 0;
+  }
+  aside .bottom-line.active {
+    transform: translateY(-15px) rotate(-45deg);
   }
 }
 main {
