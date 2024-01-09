@@ -392,6 +392,14 @@ body {
   width: 100%;
   display: flex;
 }
+@media screen and (max-width: 570px) {
+  .header {
+    flex-direction: column;
+    padding: 0px;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+}
 .header__left-column .logo {
   display: flex;
   align-items: center;
@@ -565,8 +573,15 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 119px;
+  min-height: 119px;
   padding: 0px 53px 0px 38px;
+}
+@media screen and (max-width: 570px) {
+  .caption-table {
+    flex-direction: column;
+    padding: 0px;
+    margin-bottom: 20px;
+  }
 }
 .caption-table .title {
   width: 155px;
@@ -595,6 +610,12 @@ main {
   line-height: normal;
   letter-spacing: -0.14px;
   margin: 0px 0px 0px 0px;
+}
+@media screen and (max-width: 570px) {
+  .caption-table .title {
+    order: 2;
+    align-items: center;
+  }
 }
 .caption-table .search {
   width: 216px;
@@ -638,6 +659,13 @@ main {
 }
 .caption-table .search form input:focus-visible {
   outline: none;
+}
+@media screen and (max-width: 570px) {
+  .caption-table .search {
+    order: 1;
+    margin-bottom: 30px;
+    border: 1px solid #c4c2c2;
+  }
 }
 .table {
   display: table;
@@ -785,49 +813,57 @@ main {
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-width: 850px) {
-  .main-table-mobail {
-    display: none;
-  }
+.main-table-mobail {
+  display: none;
 }
 @media screen and (max-width: 850px) {
   .main-table-mobail {
     display: block;
   }
+  .main-table-mobail summary {
+    color: #292D32;
+    font-family: Poppins;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.14px;
+  }
 }
 .main-table-mobail .table-cell-mobail {
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.14px;
   display: flex;
+  flex-wrap: wrap;
   margin-left: 30px;
   border-bottom: 1px solid #eeeeee;
 }
-.main-table-mobail .table-cell-mobail details > summary {
-  color: #292D32;
-  font-family: Poppins;
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: -0.14px;
+@media screen and (max-width: 500px) {
+  .main-table-mobail .table-cell-mobail {
+    flex-direction: column;
+  }
 }
 .main-table-mobail .table-cell-mobail p:first-child {
   color: #B5B7C0;
-  font-family: Poppins;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: -0.14px;
   width: 150px;
+}
+@media screen and (max-width: 500px) {
+  .main-table-mobail .table-cell-mobail p:first-child {
+    margin: 0px 0px 0px 0px;
+  }
 }
 .main-table-mobail .table-cell-mobail p:last-child {
   color: #292D32;
-  font-family: Poppins;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: -0.14px;
   margin-left: 50px;
+}
+@media screen and (max-width: 500px) {
+  .main-table-mobail .table-cell-mobail p:last-child {
+    margin: 0px 0px 20px 0px;
+  }
 }
 footer {
   min-height: 258px;
